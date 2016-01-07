@@ -2,7 +2,6 @@
     position: relative;
     margin: 200px auto 0;
     perspective: 800px;
-    perspective-origin: 50% 400px;
 }
 #tetris-viewport {
     width: 200px;
@@ -10,6 +9,7 @@
     margin: auto;
     position: relative;
     transform-style: preserve-3d;
+    transform-origin: 50% 50% 100px;
 
     &.block-0 .block-0 {
         opacity: .9;
@@ -152,6 +152,7 @@
         border-radius: 50%;
         margin-left: 5px;
         vertical-align: middle;
+        border: 1px solid  #333;
     }
 
     &.active {
