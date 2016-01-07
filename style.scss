@@ -1,0 +1,160 @@
+#viewport {
+    position: relative;
+    margin: 200px auto 0;
+    perspective: 800px;
+    perspective-origin: 50% 400px;
+}
+#tetris-viewport {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+
+    &.block-0 .block-0 {
+        opacity: .9;
+    }
+    &.block-1 .block-1 {
+        opacity: .9;
+    }
+    &.block-2 .block-2 {
+        opacity: .9;
+    }
+    &.block-3 .block-3 {
+        opacity: .9;
+    }
+    &.block-4 .block-4 {
+        opacity: .9;
+    }
+    &.block-5 .block-5 {
+        opacity: .9;
+    }
+    &.block-6 .block-6 {
+        opacity: .9;
+    }
+    &.block-7 .block-7 {
+        opacity: .9;
+    }
+}
+
+.cube {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform-style: preserve-3d;
+    opacity: .05;
+}
+
+.cube > div {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed  #000;
+}
+
+.cube > div:first-child  {
+    transform: rotateX(90deg) translateZ(25px);
+}
+.cube > div:nth-child(2) {
+    transform: translateZ(25px);
+}
+.cube > div:nth-child(3) {
+    transform: rotateY(90deg) translateZ(25px);
+    text-align: center;
+}
+.cube > div:nth-child(4) {
+    transform: rotateY(180deg) translateZ(25px);
+}
+.cube > div:nth-child(5) {
+    transform: rotateY(-90deg) translateZ(25px);
+}
+.cube > div:nth-child(6) {
+    transform: rotateX(-90deg) rotate(180deg) translateZ(25px);
+}
+
+.cube.block-0 div,
+.buttons button.block-0:after {
+    background-color: #f0f;
+}
+.cube.block-1 div,
+.buttons button.block-1:after {
+    background-color: #ff0;
+}
+.cube.block-2 div,
+.buttons button.block-2:after {
+    background-color: #f00;
+}
+.cube.block-3 div,
+.buttons button.block-3:after {
+    background-color: #0f0;
+}
+.cube.block-4 div,
+.buttons button.block-4:after {
+    background-color: #0ff;
+}
+.cube.block-5 div,
+.buttons button.block-5:after {
+    background-color: #00f;
+}
+.cube.block-6 div,
+.buttons button.block-6:after {
+    background-color: #ccc;
+}
+.cube.block-7 div,
+.buttons button.block-7:after {
+    background-color: #888;
+}
+
+.cube.x-1 {
+    left: 50px;
+}
+.cube.x-2 {
+    left: 100px;
+}
+.cube.x-3 {
+    left: 150px;
+}
+.cube.y-1 {
+    top: 50px;
+}
+.cube.y-2 {
+    top: 100px;
+}
+.cube.y-3 {
+    top: 150px;
+}
+.cube.z-1 {
+    transform: translateZ(50px)
+}
+.cube.z-2 {
+    transform: translateZ(100px)
+}
+.cube.z-3 {
+    transform: translateZ(150px)
+}
+
+.buttons button {
+    border: 2px solid #ccc;
+    padding: 5px 5px 5px 5px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 55px;
+    height: 30px;
+    background-color: #fff;
+    
+    &:after {
+        content: '';
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+
+    &.active {
+        background-color: #ccc;
+    }
+}
