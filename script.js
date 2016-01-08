@@ -2,7 +2,7 @@ $(function() {
     var viewport = $('#tetris');
     var rotation = {
         start: {},
-        matrix: matrixMltpl(getRotatitonMatrix('x', 20), getRotatitonMatrix('y', 20))
+        matrix: matrixMltpl(getRotatitonMatrix('x', 30), getRotatitonMatrix('y', 30))
     };
     viewport.css('transform', 'matrix3d(' + rotation.matrix + ')');
 
@@ -37,6 +37,10 @@ $(function() {
                     cube.appendTo(viewport);
                 }
             }
+        }
+
+        for (var i = 0; i < blocks.length; i++) {
+            viewport.addClass('block-' + i);
         }
     }
 
