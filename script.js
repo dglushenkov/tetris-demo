@@ -2,7 +2,7 @@ $(function() {
     var viewport = $('#tetris');
     var rotation = {
         start: {},
-        matrix: matrixMltpl(getRotatitonMatrix('x', 30), getRotatitonMatrix('y', 30))
+        matrix: matrixMltpl(getRotatitonMatrix('x', 30), getRotatitonMatrix('y', 20))
     };
     viewport.css('transform', 'matrix3d(' + rotation.matrix + ')');
 
