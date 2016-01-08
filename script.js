@@ -124,10 +124,4 @@ $(function() {
 
         return matrix;
     }
-
-    // Get matrix string representation
-    function matrixToString(matrix) {
-        for (var i = 0, result = []; i < matrix.length; result.push(matrix[i].join(',')), i++) ;
-        return result.join(',');
-    }
 });
