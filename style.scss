@@ -22,7 +22,7 @@ $colors: #ef2020, #1556d9, #26a51c, #fbed14, #b51bac, #24cae3, #4e4e4e, #ff9a0a;
             background-color: rgba($color, 0);
         }
         &.block-#{$num} .cube.block-#{$num} div {
-            background-color: rgba($color, .9);
+            background-color: rgba($color, .8);
         }
         $num: $num + 1;
     }
@@ -126,30 +126,5 @@ $colors: #ef2020, #1556d9, #26a51c, #fbed14, #b51bac, #24cae3, #4e4e4e, #ff9a0a;
             }
             $num: $num + 1;
         }
-    }
-}
-.tetris-buttons button {
-    border: 2px solid #ccc;
-    padding: 5px 5px 5px 5px;
-    margin-left: 20px;
-    box-sizing: border-box;
-    border-radius: 3px;
-    width: 55px;
-    height: 30px;
-    background-color: #fff;
-    
-    &:after {
-        content: '';
-        display: inline-block;
-        height: 15px;
-        width: 15px;
-        border-radius: 50%;
-        margin-left: 5px;
-        vertical-align: middle;
-        border: 1px solid  #333;
-    }
-
-    &.active {
-        background-color: #ccc;
     }
 }
