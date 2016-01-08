@@ -181,7 +181,7 @@ function tetris3d(blocks, n) {
 
     // Recursive function to find and insert next block into container at point
     function findBlockToInsert(container, blocks, usedBlocks, point) {
-        // Loop through all blocks not used before
+        // Loop through all unused blocks
         for (var i = 0; i < blocks.length; i++) {
             if (~$.inArray(i, usedBlocks)) continue;
 
