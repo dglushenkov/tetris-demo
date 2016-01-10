@@ -85,14 +85,17 @@ $colors: #ef2020, #1556d9, #26a51c, #fbed14, #b51bac, #24cae3, #4e4e4e, #ff9a0a;
 .cube.y-3 {
     top: 150px;
 }
+.cube.z-0 {
+    transform: translateZ(25px);
+}
 .cube.z-1 {
-    transform: translateZ(50px)
+    transform: translateZ(75px)
 }
 .cube.z-2 {
-    transform: translateZ(100px)
+    transform: translateZ(125px)
 }
 .cube.z-3 {
-    transform: translateZ(150px)
+    transform: translateZ(175px)
 }
 
 // Controls
